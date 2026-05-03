@@ -186,6 +186,17 @@
       "title": "Stockholm en amoureux",
       "description": "Une nuit dans le train pour une escapade magique dans la capitale suédoise : le meilleur remède possible après avoir été séparés.",
       "images": ["stockholm/1.jpeg", "stockholm/2.jpeg"]
+    },
+    {
+      "id": "soeurs-lund",
+      "coordinates": [13.1929449, 55.7029296],
+      "lieu": "Lund",
+      "zoomLevel": 10,
+      "date": "2026-05-01",
+      "displayDate": "1 - 3 Mai 2026",
+      "title": "Première moité de la famille",
+      "description": "Une journée à Lund pour rencontrer tes soeurs. Un moment important, que j'ai adoré.",
+      "images": []
     }
   ]
 }
