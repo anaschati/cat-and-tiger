@@ -20,69 +20,80 @@ export default function MapCanvas() {
   
   const [narrativeIndex, setNarrativeIndex] = useState(0);
   const currentNarrativeMemory = memories[narrativeIndex];
-
-  // 1. On crée une référence pour manipuler la carte
+  
   const mapRef = useRef<MapRef>(null);
 
-  // 2. L'effet qui déclenche le vol de la caméra
-  // 2. L'effet qui déclenche le vol de la caméra (Mis à jour)
+  // Détection du mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Le vol de la caméra
   useEffect(() => {
     if (!mapRef.current) return;
 
     if (viewMode === 'narrative') {
       const memory = memories[narrativeIndex];
       
+      // On sécurise le padding pour Mapbox (nombres entiers uniquement)
+      const paddingOptions = isMobile 
+        ? { left: 0, right: 0, top: 0, bottom: Math.round(window.innerHeight * 0.45) } 
+        : { left: 450, right: 0, top: 0, bottom: 0 };
+      
       mapRef.current.flyTo({
         center: [memory.coordinates[0], memory.coordinates[1]],
         zoom: memory.zoomLevel || 14,
-        speed: 1.1, 
+        speed: 0.6, 
         curve: 1.1, 
-        padding: { left: 450, right: 0, top: 0, bottom: 0 }, 
+        padding: paddingOptions, 
         essential: true
       });
     } else if (viewMode === 'exploration') {
-      // Quand on repasse en exploration, on retire le padding en douceur
-      // sans forcer le déplacement de la caméra (l'utilisateur reste où il est)
       mapRef.current.easeTo({
         padding: { left: 0, right: 0, top: 0, bottom: 0 },
-        duration: 800 // Une belle petite animation de 0.8 seconde pour se recentrer
+        duration: 800 
       });
     }
-  }, [narrativeIndex, viewMode]);
+  }, [narrativeIndex, viewMode, isMobile]);
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'absolute', top: 0, left: 0 }}>
       
-      {/* LE TOGGLE DES MODES */}
+      {/* LE TOGGLE DES MODES (Ajusté pour mobile) */}
       <div style={{
-        position: 'absolute', top: '2rem', right: '2rem', zIndex: 20,
+        position: 'absolute', 
+        top: isMobile ? '1rem' : '2rem', 
+        right: isMobile ? '1rem' : '2rem', 
+        zIndex: 20,
         backgroundColor: 'white', borderRadius: '30px', padding: '0.4rem',
         display: 'flex', boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
       }}>
         <button
-          onClick={() => {
-            setViewMode('exploration');
-            setSelectedMemory(null);
-          }}
+          onClick={() => { setViewMode('exploration'); setSelectedMemory(null); }}
           style={{
-            padding: '0.6rem 1.2rem', borderRadius: '25px', border: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem',
+            padding: isMobile ? '0.5rem 0.8rem' : '0.6rem 1.2rem', 
+            borderRadius: '25px', border: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem',
             backgroundColor: viewMode === 'exploration' ? '#ff7eb3' : 'transparent',
             color: viewMode === 'exploration' ? 'white' : '#666',
-            fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s'
+            fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s',
+            fontSize: isMobile ? '0.85rem' : '1rem'
           }}
         >
           <MapIcon size={18} /> Exploration
         </button>
         <button
-          onClick={() => {
-            setViewMode('narrative');
-            setSelectedMemory(null);
-          }}
+          onClick={() => { setViewMode('narrative'); setSelectedMemory(null); }}
           style={{
-            padding: '0.6rem 1.2rem', borderRadius: '25px', border: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem',
+            padding: isMobile ? '0.5rem 0.8rem' : '0.6rem 1.2rem', 
+            borderRadius: '25px', border: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem',
             backgroundColor: viewMode === 'narrative' ? '#ff7eb3' : 'transparent',
             color: viewMode === 'narrative' ? 'white' : '#666',
-            fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s'
+            fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s',
+            fontSize: isMobile ? '0.85rem' : '1rem'
           }}
         >
           <Play size={18} /> Narratif
@@ -91,24 +102,16 @@ export default function MapCanvas() {
 
       {/* LA CARTE */}
       <Map
-        ref={mapRef} // On accroche notre référence ici
+        ref={mapRef}
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
-        initialViewState={{
-          longitude: 13.0038,
-          latitude: 55.6050,
-          zoom: 4
-        }}
+        initialViewState={{ longitude: 13.0038, latitude: 55.6050, zoom: 4 }}
         mapStyle="mapbox://styles/mapbox/outdoors-v12"
         attributionControl={false}
       >
         {memories.map((memory) => {
-          // On détermine si ce pin précis est le point actif du mode narratif
           const isCurrentNarrative = viewMode === 'narrative' && memory.id === currentNarrativeMemory.id;
-          
-          // On affiche le pin SI on est en exploration OU SI c'est le pin actif du mode narratif
           const shouldShowPin = viewMode === 'exploration' || isCurrentNarrative;
 
-          // Si on ne doit pas l'afficher, on ne rend rien du tout (le pin disparaît)
           if (!shouldShowPin) return null;
 
           return (
@@ -119,23 +122,18 @@ export default function MapCanvas() {
               anchor="bottom"
               onClick={(e) => {
                 e.originalEvent.stopPropagation();
-                if (viewMode === 'exploration') {
-                  setSelectedMemory(memory);
-                }
+                if (viewMode === 'exploration') setSelectedMemory(memory);
               }}
             >
               <div 
                 style={{ 
                   display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'pointer',
                   transition: 'transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                  transform: isCurrentNarrative || hoveredPinId === memory.id 
-                    ? 'scale(1.3)' 
-                    : 'scale(1)' 
+                  transform: isCurrentNarrative || hoveredPinId === memory.id ? 'scale(1.3)' : 'scale(1)' 
                 }}
                 onMouseEnter={() => setHoveredPinId(memory.id)}
                 onMouseLeave={() => setHoveredPinId(null)}
               >
-                {/* On affiche le label au survol OU tout le temps si c'est le pin actif du mode narratif */}
                 {(hoveredPinId === memory.id || isCurrentNarrative) && memory.lieu && (
                   <div style={{
                     backgroundColor: 'white', padding: '4px 10px', borderRadius: '12px',
@@ -145,11 +143,7 @@ export default function MapCanvas() {
                     {memory.lieu}
                   </div>
                 )}
-                <MapPin 
-                  size={32} 
-                  color={isCurrentNarrative ? "#f43f5e" : "#ff7eb3"} 
-                  fill="#fff0f5" 
-                />
+                <MapPin size={32} color={isCurrentNarrative ? "#f43f5e" : "#ff7eb3"} fill="#fff0f5" />
               </div>
             </Marker>
           );
@@ -166,11 +160,12 @@ export default function MapCanvas() {
       <AnimatePresence>
         {viewMode === 'narrative' && (
           <>
-            <FloatingPanel memory={currentNarrativeMemory} />
+            <FloatingPanel memory={currentNarrativeMemory} isMobile={isMobile} />
             <Timeline 
               memories={memories} 
               currentIndex={narrativeIndex} 
               onNavigate={(index) => setNarrativeIndex(index)} 
+              isMobile={isMobile}
             />
           </>
         )}
