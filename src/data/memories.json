@@ -1,0 +1,224 @@
+{
+  "memories": [
+    {
+      "id": "premiere-rencontre",
+      "coordinates": [13.175168, 55.731873],
+      "lieu": "Chez notre cher Bastien",
+      "zoomLevel": 18,
+      "date": "2026-01-31",
+      "displayDate": "31 Janvier 2026",
+      "title": "Là où tout a commencé",
+      "description": "C'est ici qu'on s'est vus pour la première fois. Merci d'avoir décidé de venir même si tu étais fatiguée. ",
+      "images": ["premiere_fois/1.jpeg"]
+    },
+    {
+      "id": "premier-bisou",
+      "coordinates": [13.211144, 55.7054438],
+      "lieu": "Hallands",
+      "zoomLevel": 18, 
+      "date": "2026-02-01",
+      "displayDate": "1er Février 2026",
+      "title": "Notre premier bisou",
+      "description": "Le meilleur moment à Hallands jusqu'à présent.",
+      "images": ["hallands_first/1.png"]
+    },
+    {
+      "id": "premiere-nuit-bb",
+      "coordinates": [13.197263, 55.702441],
+      "lieu": "Brunius Bed & Breakfast",
+      "zoomLevel": 18,
+      "date": "2026-02-01",
+      "displayDate": "1er Février 2026",
+      "title": "Premier dodo (un peu) à deux",
+      "description": "La toute première fois qu'on s'endormait l'un contre l'autre.",
+      "images": ["bbb/1.jpg"]
+    },
+    {
+      "id": "premier-date",
+      "coordinates": [13.192141205637395, 55.70123067977916],
+      "lieu": "Purgatorio",
+      "zoomLevel": 18,
+      "date": "2026-02-03",
+      "displayDate": "3 Février 2026",
+      "title": "Quelque chose de prévu ce soir ?",
+      "description": "Notre premier date. Des verres de vins à 15 euros, et toi qui insistes pour payer.",
+      "images": ["purgatorio/1.png"]
+    },
+    {
+      "id": "dodo-chez-mats",
+      "coordinates": [13.199594, 55.718024],
+      "lieu": "Chez toi",
+      "zoomLevel": 18,
+      "date": "2026-02-03",
+      "displayDate": "3 Février 2026",
+      "title": "Une nouvelle maison",
+      "description": "La première fois que j'ai dormi chez toi. Une première qui allait vite devenir ma nouvelle habitude préférée.",
+      "images": ["mats_1st/1.jpeg"]
+    },
+    {
+      "id": "deuxieme-date",
+      "coordinates": [13.192523, 55.705397],
+      "lieu": "Lenoteket",
+      "zoomLevel": 18,
+      "date": "2026-02-05",
+      "displayDate": "5 Février 2026",
+      "title": "Deuxième date",
+      "description": "Le deuxième date, encore du vin, mais à 30 euros cette fois. ",
+      "images": ["lenoteket/1.jpeg"]
+    },
+    {
+      "id": "cinema",
+      "coordinates": [13.194621, 55.701401],
+      "lieu": "Cinéma",
+      "zoomLevel": 18,
+      "date": "2026-02-12",
+      "displayDate": "12 Février 2026",
+      "title": "Marty Supreme",
+      "description": "J'attendais juste que tes parents partent pour t'emmener au cinéma. J'avais bien choisi les places mais y'avait du monde ...",
+      "images": ["marty/1.jpeg"]
+    },
+    {
+      "id": "main-parc",
+      "coordinates": [13.190472, 55.723105],
+      "lieu": "Le Parc",
+      "zoomLevel": 15,
+      "date": "2026-02-14",
+      "displayDate": "14 Février 2026",
+      "title": "Main dans la main",
+      "description": "Une balade toute simple qui s'est transformée en un moment magique quand nos mains se sont trouvées.",
+      "images": ["parc/1.jpeg", "parc/2.jpeg", "parc/3.jpeg"]
+    },
+    {
+      "id": "saint-valentin",
+      "coordinates": [13.1963168,55.7020813],
+      "lieu": "Kinjo Sushi",
+      "zoomLevel": 18,
+      "date": "2026-02-14",
+      "displayDate": "14 Février 2026",
+      "title": "Notre première Saint-Valentin",
+      "description": "Des sushis juste toi et moi.",
+      "images": ["kinjo/1.jpg"]
+    },
+    {
+      "id": "voyage-copenhague",
+      "coordinates": [12.5700724,55.6867243],
+      "lieu": "Copenhague",
+      "zoomLevel": 10,
+      "date": "2026-02-21",
+      "displayDate": "21 Février 2026",
+      "title": "Escapade danoise",
+      "description": "Notre premier voyage ensemble. Il a suffi de traverser un pont pour vivre notre première aventure.",
+      "images": ["cph/1.jpeg", "cph/2.jpeg", "cph/3.jpeg"]
+    },
+    {
+      "id": "un-mois",
+      "coordinates": [13.1922441, 55.705207],
+      "lieu": "Belle Époque",
+      "zoomLevel": 18,
+      "date": "2026-02-28",
+      "displayDate": "28 Février 2026",
+      "title": "Joyeux 1 mois !",
+      "description": "Une première étape importante : notre premier mois ensemble. Un mois de rires, de découvertes, et de moments partagés qui m'ont déjà fait tomber pour toi.",
+      "images": ["one_month/1.jpeg"]
+    },
+    {
+      "id": "je-taime",
+      "coordinates": [13.199594, 55.718114],
+      "lieu": "Maison",
+      "zoomLevel": 18,
+      "date": "2026-02-28",
+      "displayDate": "28 Février 2026",
+      "title": "Notre premier \"Je t'aime\"",
+      "description": "Le jour où on se l’est dit pour la première fois. Un moment qui restera à jamais gravé dans mon coeur.",
+      "images": ["jtm/1.jpeg"]
+    },
+    {
+      "id": "voyage-laponie",
+      "coordinates": [23.8673395, 68.1878236],
+      "lieu": "Laponie",
+      "zoomLevel": 4,
+      "date": "2026-03-07",
+      "displayDate": "7 - 13 Mars 2026",
+      "title": "Au bout du monde",
+      "description": "Le froid, la neige à perte de vue, et nous. Merci à l'ESN d'avoir libéré une place à la dernière minute.",
+      "images": ["lapland/1.jpeg", "lapland/2.jpeg", "lapland/3.jpeg", "lapland/4.jpeg"]
+    },
+    {
+      "id": "voyage-hambourg",
+      "coordinates": [10.0013165,53.5501721],
+      "lieu": "Hambourg",
+      "zoomLevel": 9,
+      "date": "2026-03-21",
+      "displayDate": "21 Mars 2026",
+      "title": "Hallo Hamburg !",
+      "description": "Entre autobahn, ghetto, et balade au bord de l'eau, on a découvert une ville pleine de surprises. J'espère que t'étais pas trop fatiguée d'être côté passager.",
+      "images": ["hamburg/1.jpeg", "hamburg/2.jpeg"]
+    },
+    {
+      "id": "voyage-prague",
+      "coordinates": [14.4212535,50.0874654],
+      "lieu": "Prague",
+      "zoomLevel": 10,
+      "date": "2026-04-01",
+      "displayDate": "1er - 5 Avril 2026",
+      "title": "Prague en amoureux",
+      "description": "Se perdre en amoureux dans l'une des plus belles villes d'Europe. L'une de nos plus belles aventures à ce jour.",
+      "images": ["prague/1.jpeg", "prague/2.jpeg", "prague/3.jpeg"]
+    },
+    {
+      "id": "rencontre-parents",
+      "coordinates": [14.413471221923828,50.08125686645508],
+      "lieu": "Opéra de Prague",
+      "zoomLevel": 18,
+      "date": "2026-04-01",
+      "displayDate": "1er Avril 2026",
+      "title": "Papa et Maman chat",
+      "description": "La première fois que j'ai rencontré tes parents. Un peu de stress et de gène, mais surtout beaucoup de joie.",
+      "images": ["prague_opera/1.jpeg"]
+    },
+    {
+      "id": "diner-parents",
+      "coordinates": [14.4231777,50.0892301],
+      "lieu": "Agave Restaurant",
+      "zoomLevel": 18,
+      "date": "2026-04-02",
+      "displayDate": "2 Avril 2026",
+      "title": "Double date",
+      "description": "Un dîner partagé tous ensemble pour apprendre à mieux se connaître.",
+      "images": ["double_date/1.jpg"]
+    },
+    {
+      "id": "foudroiement",
+      "coordinates": [14.429306, 50.076818],
+      "lieu": "Airbnb de Prague",
+      "zoomLevel": 18,
+      "date": "2026-04-03",
+      "displayDate": "3 Avril 2026",
+      "title": "Le premier foudroiement",
+      "description": "Une péripétie particulièrement mémorable...",
+      "images": ["foudroiement/1.jpeg"]
+    },
+    {
+      "id": "manque",
+      "coordinates": [-7.6200284, 33.5945144],
+      "lieu": "À distance",
+      "zoomLevel": 2,
+      "date": "2026-04-09",
+      "displayDate": "9 - 15 Avril 2026",
+      "title": "La plus longue semaine",
+      "description": "La toute première fois qu'on passait autant de temps loin de l'autre. Ça m'a juste confirmé à quel point tu me manques vite.",
+      "images": ["casa/1.jpeg"]
+    },
+    {
+      "id": "voyage-stockholm",
+      "coordinates": [18.0710935, 59.3251172],
+      "lieu": "Stockholm",
+      "zoomLevel": 10,
+      "date": "2026-04-16",
+      "displayDate": "16 - 19 Avril 2026",
+      "title": "Stockholm en amoureux",
+      "description": "Une nuit dans le train pour une escapade magique dans la capitale suédoise : le meilleur remède possible après avoir été séparés.",
+      "images": ["stockholm/1.jpeg", "stockholm/2.jpeg"]
+    }
+  ]
+}
