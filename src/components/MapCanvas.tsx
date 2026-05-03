@@ -14,7 +14,7 @@ const { memories } = memoriesDataRaw as unknown as { memories: Memory[] };
 type ViewMode = 'exploration' | 'narrative';
 
 export default function MapCanvas() {
-  const [viewMode, setViewMode] = useState<ViewMode>('exploration');
+  const [viewMode, setViewMode] = useState<ViewMode>('narrative');
   const [hoveredPinId, setHoveredPinId] = useState<string | null>(null);
   const [selectedMemory, setSelectedMemory] = useState<Memory | null>(null);
   
