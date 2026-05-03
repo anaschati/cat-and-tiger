@@ -23,17 +23,6 @@
       "images": ["hallands_first/1.png"]
     },
     {
-      "id": "premiere-nuit-bb",
-      "coordinates": [13.197263, 55.702441],
-      "lieu": "Brunius Bed & Breakfast",
-      "zoomLevel": 18,
-      "date": "2026-02-01",
-      "displayDate": "1er Février 2026",
-      "title": "Premier dodo (un peu) à deux",
-      "description": "La toute première fois qu'on s'endormait l'un contre l'autre.",
-      "images": ["bbb/1.jpg"]
-    },
-    {
       "id": "premier-date",
       "coordinates": [13.192141205637395, 55.70123067977916],
       "lieu": "Purgatorio",
@@ -43,17 +32,6 @@
       "title": "Quelque chose de prévu ce soir ?",
       "description": "Notre premier date. Des verres de vins à 15 euros, et toi qui insistes pour payer.",
       "images": ["purgatorio/1.png"]
-    },
-    {
-      "id": "dodo-chez-mats",
-      "coordinates": [13.199594, 55.718024],
-      "lieu": "Chez toi",
-      "zoomLevel": 18,
-      "date": "2026-02-03",
-      "displayDate": "3 Février 2026",
-      "title": "Une nouvelle maison",
-      "description": "La première fois que j'ai dormi chez toi. Une première qui allait vite devenir ma nouvelle habitude préférée.",
-      "images": ["mats_1st/1.jpeg"]
     },
     {
       "id": "deuxieme-date",
@@ -74,7 +52,7 @@
       "date": "2026-02-12",
       "displayDate": "12 Février 2026",
       "title": "Marty Supreme",
-      "description": "J'attendais juste que tes parents partent pour t'emmener au cinéma. J'avais bien choisi les places mais y'avait du monde ...",
+      "description": "J'attendais juste le bon moment pour t'emmener au cinéma, voir un film que tu as brièvement mentionné.",
       "images": ["marty/1.jpeg"]
     },
     {
@@ -163,7 +141,7 @@
       "displayDate": "1er - 5 Avril 2026",
       "title": "Prague en amoureux",
       "description": "Se perdre en amoureux dans l'une des plus belles villes d'Europe. L'une de nos plus belles aventures à ce jour.",
-      "images": ["prague/1.jpeg", "prague/2.jpeg", "prague/3.jpeg"]
+      "images": ["prague/1.jpeg", "prague/2.jpeg"]
     },
     {
       "id": "rencontre-parents",
@@ -186,17 +164,6 @@
       "title": "Double date",
       "description": "Un dîner partagé tous ensemble pour apprendre à mieux se connaître.",
       "images": ["double_date/1.jpg"]
-    },
-    {
-      "id": "foudroiement",
-      "coordinates": [14.429306, 50.076818],
-      "lieu": "Airbnb de Prague",
-      "zoomLevel": 18,
-      "date": "2026-04-03",
-      "displayDate": "3 Avril 2026",
-      "title": "Le premier foudroiement",
-      "description": "Une péripétie particulièrement mémorable...",
-      "images": ["foudroiement/1.jpeg"]
     },
     {
       "id": "manque",
